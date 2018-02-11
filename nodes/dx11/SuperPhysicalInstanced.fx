@@ -129,6 +129,7 @@ struct vs2ps
 	float4 PosW: TEXCOORD1;
 	float3 NormW : TEXCOORD2;
 	float3 V: TEXCOORD3;
+	float4 Color : TEXCOORD4;
 };
 
 struct vs2psBump
@@ -139,6 +140,7 @@ struct vs2psBump
 	float3 NormW : TEXCOORD2;
 	float3 tangent : TEXCOORD3;
 	float3 binormal : TEXCOORD4;
+	float4 Color : TEXCOORD5;
 };
 
 int TransformIndex(uint ii)
@@ -173,6 +175,7 @@ vs2ps VS(
 	Out.NormW = normalize(Out.NormW);
     Out.PosWVP  = mul(PosO, worldViewProjection);
 	Out.TexCd = mul(TexCd, tTex);
+	Out.Color = Color * sbColor[ColorIndex(ii)];
     return Out;
 }
 
@@ -200,7 +203,7 @@ vs2psBump VS_Bump(
     return Out;
 }
 
-float4 doLighting(float4 PosW, float3 N, float4 TexCd){
+float4 doLighting(float4 PosW, float3 N, float4 TexCd, float4 color){
 	
 	float3 V = normalize(tVI[3].xyz - PosW.xyz);
 	
@@ -233,7 +236,7 @@ float4 doLighting(float4 PosW, float3 N, float4 TexCd){
 	if(tX+tY > 4 && !noTile) metallicT = metallTex.Sample(g_samLinear, TexCd.xy).r;
 	else if(tX+tY > 4 && noTile) metallicT = textureNoTile(metallTex, TexCd.xy).r;
 
-	float4 albedo = texCol * saturate(Color) * aoT;
+	float4 albedo = texCol * saturate(color) * aoT;
 	metallicT *= metallic;
 
 	texRoughness *= roughness;
@@ -425,7 +428,7 @@ float4 doLighting(float4 PosW, float3 N, float4 TexCd){
 
 float4 PS_PBR(vs2ps In): SV_Target
 {	
-	return doLighting(In.PosW, normalize(In.NormW), In.TexCd);
+	return doLighting(In.PosW, normalize(In.NormW), In.TexCd, In.Color);
 }
 
 float4 PS_PBR_Bump(vs2psBump In): SV_Target
@@ -444,7 +447,7 @@ float4 PS_PBR_Bump(vs2psBump In): SV_Target
 	if(length(bumpMap) > 0) bumpMap = (bumpMap * 2.0f) - 1.0f;
 	
 	float3 Nb = normalize(In.NormW.xyz + (bumpMap.x * In.tangent + bumpMap.y * In.binormal)*bumpy);
-	return doLighting(In.PosW, Nb, In.TexCd);
+	return doLighting(In.PosW, Nb, In.TexCd, In.Color);
 
 }
 
@@ -484,7 +487,7 @@ float4 PS_PBR_Bump_AutoTNB(vs2ps In): SV_Target
 	
 	float3 Nb = normalize(In.NormW.xyz + (bumpMap.x * (t) + bumpMap.y * (b))*bumpy);
 	
-	return doLighting(In.PosW, Nb, In.TexCd);
+	return doLighting(In.PosW, Nb, In.TexCd, In.Color);
 }
 
 

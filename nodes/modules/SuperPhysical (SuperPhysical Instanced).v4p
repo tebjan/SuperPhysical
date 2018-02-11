@@ -187,9 +187,9 @@
    </PIN>
    </NODE>
    <NODE nodename="IOBox (Node)" componentmode="InABox" id="249" systemname="IOBox (Node)">
-   <BOUNDS type="Box" left="14385" top="8145" width="795" height="240">
+   <BOUNDS type="Box" left="14010" top="8730" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="14385" top="8145" width="0" height="0">
+   <BOUNDS type="Node" left="14010" top="8730" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Descriptive Name" slicecount="1" values="ShadowMaps">
    </PIN>
@@ -920,16 +920,6 @@
    <LINKPOINT x="10460" y="7295">
    </LINKPOINT>
    </LINK>
-   <NODE nodename="IOBox (Node)" componentmode="InABox" id="316">
-   <BOUNDS type="Box" left="6630" top="5490" width="795" height="240">
-   </BOUNDS>
-   <BOUNDS type="Node" left="6630" top="5490" width="0" height="0">
-   </BOUNDS>
-   <PIN pinname="Input Node" slicecount="1" visible="1" values="||">
-   </PIN>
-   <PIN pinname="Descriptive Name" slicecount="1" values="sbColor">
-   </PIN>
-   </NODE>
    <NODE systemname="Instancer (DX11.Drawer)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Instancer (DX11.Drawer)" componentmode="Hidden" id="317">
    <BOUNDS type="Node" left="1545" top="6180" width="100" height="100">
    </BOUNDS>
@@ -949,9 +939,9 @@
    <LINK srcnodeid="317" srcpinname="Geometry Out" dstnodeid="1" dstpinname="Geometry">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="318">
-   <BOUNDS type="Box" left="2280" top="5760" width="795" height="240">
+   <BOUNDS type="Box" left="2895" top="5340" width="795" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="2280" top="5760" width="0" height="0">
+   <BOUNDS type="Node" left="2895" top="5340" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="1" visible="1" values="2">
    </PIN>
@@ -973,9 +963,9 @@
    <LINK srcnodeid="318" srcpinname="Y Output Value" dstnodeid="1" dstpinname="ColorCount">
    </LINK>
    <NODE systemname="Integral (Spreads)" filename="%VVVV%\lib\nodes\plugins\VVVV.Nodes.dll" nodename="Integral (Spreads)" componentmode="Hidden" id="319">
-   <BOUNDS type="Node" left="2970" top="6240" width="100" height="100">
+   <BOUNDS type="Node" left="3015" top="6315" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="2970" top="6240" width="3000" height="3000">
+   <BOUNDS type="Box" left="3015" top="6315" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -983,7 +973,7 @@
    </PIN>
    </NODE>
    <NODE systemname="CDR (Spreads)" nodename="CDR (Spreads)" componentmode="Hidden" id="320">
-   <BOUNDS type="Node" left="2985" top="6900" width="100" height="100">
+   <BOUNDS type="Node" left="3000" top="7170" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Input" visible="1">
    </PIN>
@@ -1011,9 +1001,9 @@
    <LINK srcnodeid="322" srcpinname="Buffer" dstnodeid="1" dstpinname="sbWorld">
    </LINK>
    <NODE systemname="DynamicBuffer (DX11.Buffer Color)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="DynamicBuffer (DX11.Buffer Color)" componentmode="Hidden" id="323">
-   <BOUNDS type="Node" left="6630" top="4245" width="100" height="100">
+   <BOUNDS type="Node" left="6660" top="4320" width="100" height="100">
    </BOUNDS>
-   <BOUNDS type="Box" left="6630" top="4245" width="3000" height="3000">
+   <BOUNDS type="Box" left="6660" top="4320" width="3000" height="3000">
    </BOUNDS>
    <PIN pinname="Buffer" visible="1">
    </PIN>
@@ -1023,9 +1013,9 @@
    <LINK srcnodeid="323" srcpinname="Buffer" dstnodeid="1" dstpinname="sbColor">
    </LINK>
    <NODE nodename="IOBox (Color)" componentmode="InABox" id="324">
-   <BOUNDS type="Box" left="6660" top="3795" width="945" height="240">
+   <BOUNDS type="Box" left="6675" top="3675" width="945" height="240">
    </BOUNDS>
-   <BOUNDS type="Node" left="6660" top="3795" width="0" height="0">
+   <BOUNDS type="Node" left="6675" top="3675" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Color Input" slicecount="1" visible="1" values="|0.00000,1.00000,0.00000,1.00000|">
    </PIN>
