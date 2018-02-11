@@ -1,6 +1,6 @@
 <!DOCTYPE PATCH  SYSTEM "http://vvvv.org/versions/vvvv50alpha35.18.dtd" >
    <PATCH nodename="C:\vvvv\vvvv_50alpha35.18_x64\packs\SuperPhysical\nodes\modules\SuperPhysical (SuperPhysical Instanced) help.v4p" systemname="SuperPhysical (SuperPhysical Instanced) help" filename="C:\vvvv\vvvv_50alpha35.18_x64\packs\SuperPhysical\nodes\modules\SuperPhysical (SuperPhysical Instanced) help.v4p" scrollx="0" scrolly="0">
-   <BOUNDS type="Window" left="1545" top="1050" width="13170" height="13065">
+   <BOUNDS type="Window" left="315" top="1020" width="13170" height="13065">
    </BOUNDS>
    <NODE id="41" systemname="Renderer (DX11 TempTarget)" filename="%VVVV%\packs\dx11\nodes\plugins\base\VVVV.DX11.Nodes.dll" nodename="Renderer (DX11 TempTarget)" componentmode="InAWindow" stayontop="0">
    <BOUNDS type="Node" left="1075" top="9115" width="100" height="100">
@@ -249,7 +249,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="6330" top="915" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.16,0.21,0.12,-0.16">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.81,0.21,-1.05,-0.16">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -275,7 +275,7 @@
    </BOUNDS>
    <BOUNDS type="Node" left="7230" top="915" width="0" height="0">
    </BOUNDS>
-   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="0.19,0.04,-0.13,-1">
+   <PIN pinname="Y Input Value" slicecount="4" visible="1" values="-0.55,0.18,-0.13,-1">
    </PIN>
    <PIN pinname="Units" slicecount="1" values="||">
    </PIN>
@@ -739,7 +739,7 @@
    <LINK srcnodeid="48" srcpinname="Y Output Value" dstnodeid="46" dstpinname="Enabled">
    </LINK>
    <NODE id="5" componentmode="Hidden" systemname="SuperPhysical (SuperPhysical Instanced)" filename="%VVVV%\packs\SuperPhysical\nodes\modules\SuperPhysical (SuperPhysical Instanced).v4p" nodename="SuperPhysical (SuperPhysical Instanced)" debug="0" stayontop="0">
-   <BOUNDS type="Window" left="1890" top="1920" width="16935" height="10335">
+   <BOUNDS type="Window" left="1890" top="1920" width="16710" height="10335">
    </BOUNDS>
    <BOUNDS type="Node" left="1410" top="5160" width="3390" height="270">
    </BOUNDS>
@@ -801,9 +801,9 @@
    <LINK srcnodeid="33" srcpinname="Output" dstnodeid="5" dstpinname="Geometry">
    </LINK>
    <NODE nodename="IOBox (Value Advanced)" componentmode="InABox" id="50">
-   <BOUNDS type="Box" left="7575" top="2955" width="795" height="960">
+   <BOUNDS type="Box" left="7455" top="3705" width="795" height="960">
    </BOUNDS>
-   <BOUNDS type="Node" left="7575" top="2955" width="0" height="0">
+   <BOUNDS type="Node" left="7455" top="3705" width="0" height="0">
    </BOUNDS>
    <PIN pinname="Y Input Value" slicecount="4" visible="1" values="10,5,4,1">
    </PIN>
@@ -823,7 +823,7 @@
    <LINK srcnodeid="50" srcpinname="Y Output Value" dstnodeid="5" dstpinname="Instance Count">
    </LINK>
    <NODE systemname="Transform (Transform 3d Vector)" nodename="Transform (Transform 3d Vector)" componentmode="Hidden" id="51">
-   <BOUNDS type="Node" left="7050" top="6645" width="100" height="100">
+   <BOUNDS type="Node" left="7380" top="6150" width="100" height="100">
    </BOUNDS>
    <PIN pinname="Transform Out" visible="1">
    </PIN>
@@ -833,15 +833,15 @@
    <LINK srcnodeid="51" srcpinname="Transform Out" dstnodeid="5" dstpinname="Instance Transformations">
    </LINK>
    <NODE systemname="RandomSpread (Spreads 3d)" filename="%VVVV%\lib\nodes\modules\2D\RandomSpread (Spreads 3d).v4p" nodename="RandomSpread (Spreads 3d)" componentmode="Hidden" id="52">
-   <BOUNDS type="Node" left="7260" top="5985" width="100" height="100">
+   <BOUNDS type="Node" left="7590" top="5490" width="100" height="100">
    </BOUNDS>
    <PIN pinname="XYZ" visible="1">
    </PIN>
    <PIN pinname="Spread Count" slicecount="1" values="22">
    </PIN>
-   <PIN pinname="Random Seed" slicecount="1" values="39">
+   <PIN pinname="Random Seed" slicecount="1" values="54">
    </PIN>
-   <PIN pinname="SizeXYZ" slicecount="3" values="1.94,1.94,1.94">
+   <PIN pinname="SizeXYZ" slicecount="3" values="3.02,3.02,3.02">
    </PIN>
    </NODE>
    <LINK srcnodeid="52" srcpinname="XYZ" dstnodeid="51" dstpinname="Translate XYZ">
